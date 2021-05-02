@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+.navbar-nav{
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Lora', serif; 
+    font-size: 25pt;
+    text-shadow: 2px 2px 2px #ffff;
+}
+
+.nav-item-style{
+    font-size: 15pt;
+    font-weight: 400;
+}
+
+.nav-item-style:hover{
+    color: #AF4A3E !important;
+    animation: ease-in-out 0.5s;
+}

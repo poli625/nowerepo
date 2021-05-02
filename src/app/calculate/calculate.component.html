@@ -1,0 +1,52 @@
+<div class="container pt-5">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h3>Calculate</h3>
+            <div class="dropdown">
+                <button
+                class="btn btn-lg dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+                style="background-color: #EBBCAC;"
+                >
+                Learing topics
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" (click)="angle_vector_calc_press()">Angle between vectors</a></li>
+                <li><a class="dropdown-item" (click)="scalar_vector_calc_press()">Scalar-vector multiplication</a></li>
+                <li><a class="dropdown-item" (click)="matrix_multiply_calc_press()">Matrix Multiply</a></li>
+                <li><a class="dropdown-item" (click)="add_sub_vectors_calc_press()">Add or Substract Vectors</a></li>
+                <li><a class="dropdown-item" (click)="orthogonal_vectors_calc_press()">Orthogonal Vectors</a></li>
+                <li><a class="dropdown-item" (click)="dot_product_calc_press()">Dot product of two Vectors</a></li>
+                </ul>
+            </div>
+            </div>
+    </div>
+
+    <div id="comp-render" *ngIf="angle_vector_display_calc" class="pt-5">
+        <app-angle-vectors-calc></app-angle-vectors-calc>
+    </div>
+
+    <div id="comp-render" *ngIf="scalar_vector_calc_display" class="pt-5">
+        <app-scalar-vector-calc></app-scalar-vector-calc>
+    </div>
+
+    <div id="comp-render" *ngIf="matrix_multiply_calc_display" class="pt-5">
+        <app-matrix-calc></app-matrix-calc>
+    </div>
+
+    <div id="comp-render" *ngIf="add_sub_vectors_calc_display" class="pt-5">
+        <app-sum-sub-vectors-calc></app-sum-sub-vectors-calc>
+    </div>
+
+    <div id="comp-render" *ngIf="orthogonal_vectors_calc_display" class="pt-5">
+        <app-ortho-vector-calc></app-ortho-vector-calc>
+    </div>
+
+    <div id="comp-render" *ngIf="dot_product_calc_display" class="pt-5">
+        <app-dot-prod-calc></app-dot-prod-calc>
+    </div>
+
+</div>

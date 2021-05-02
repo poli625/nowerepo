@@ -1,0 +1,58 @@
+<div class="container pt-5">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h3>Choose learning topic</h3>
+        </div>
+        <div class="col-md-12">
+            <div class="dropdown">
+                <button
+                class="btn btn-lg dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+                style="background-color: #EBBCAC;"
+                >
+                Learing topics
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" (click)="angle_vector_press()">Angle between vectors</a></li>
+                <li><a class="dropdown-item" (click)="scalar_vector_press()">Scalar-vector multiplication</a></li>
+                <li><a class="dropdown-item" (click)="matrix_multiply_press()">Matrix Multiply</a></li>
+                <li><a class="dropdown-item" (click)="add_sub_vectors_press()">Add or Substract Vectors</a></li>
+                <li><a class="dropdown-item" (click)="orthogonal_vectors_press()">Orthogonal Vectors</a></li>
+                <li><a class="dropdown-item" (click)="dot_product_press()">Dot product of two Vectors</a></li>
+                </ul>
+            </div>
+            </div>
+    </div>
+
+    <div class="row d-flex justify-content-center pt-5">
+        <div class="col-md-12">
+            <div id="comp-render" *ngIf="angle_vector_display" class="pt-5">
+                <app-vectors-angle></app-vectors-angle>
+            </div>
+
+            <div id="comp-render" *ngIf="scalar_vector_display" class="pt-5">
+                <app-scalar-vector-guide></app-scalar-vector-guide>
+            </div>
+
+            <div id="comp-render" *ngIf="matrix_multiply_display" class="pt-5">
+                <app-matrix-multiply-guide></app-matrix-multiply-guide>
+            </div>
+
+            <div id="comp-render" *ngIf="add_sub_vectors_display" class="pt-5">
+                <app-add-sub-vectors-guide></app-add-sub-vectors-guide>
+            </div>
+
+            <div id="comp-render" *ngIf="orthogonal_vectors_display" class="pt-5">
+                <app-orthogonal-vectors-guide></app-orthogonal-vectors-guide>
+            </div>
+
+            <div id="comp-render" *ngIf="dot_product_display" class="pt-5">
+                <app-dot-product-guide></app-dot-product-guide>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,179 @@
+<h3>Scalar Vector Calculator</h3>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-md-2">
+        <div class="form-check form-check-inline">
+        <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+        (click)="dimensional_2()"
+        />
+        <label class="form-check-label" for="inlineRadio1">2 dimensional +</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-check form-check-inline">
+        <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+        (click)="dimensional_3()"
+        />
+        <label class="form-check-label" for="inlineRadio2">3 dimensional +</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-check form-check-inline">
+        <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+        (click)="dimensional_2Minus()"
+        />
+        <label class="form-check-label" for="inlineRadio2">2 dimensional -</label>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-check form-check-inline">
+        <input
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+        (click)="dimensional_3Minus()"
+        />
+        <label class="form-check-label" for="inlineRadio2">3 dimensional -</label>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="ThreeDi">
+    <div class="row d-flex justify-content-center pt-5">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping" />
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_2"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_3"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping" />
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_2"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_3"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="TwoDi">
+    <div class="row d-flex justify-content-center pt-5">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping"/>
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_2_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_2_2"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping"/>
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_2_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_2_2"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div *ngIf="ThreeDiMinus">
+    <div class="row d-flex justify-content-center pt-5">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping" />
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_2"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_3_3"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping" />
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_2"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_3_3"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="TwoDiMinus">
+    <div class="row d-flex justify-content-center pt-5">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping"/>
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_2_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="a_2_2"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
+            <div class="input-group flex-nowrap">
+                <input type="text" class="form-control" placeholder="a" aria-label="text" aria-describedby="addon-wrapping"/>
+                <h3 class="px-2">=</h3><h3 class="px-2">{{ bracketos_unos_right }}</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_2_1"/><h3 class="px-1">,</h3>
+                <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="b_2_2"/><h3 class="px-2">{{ bracketos_unos_left }}</h3>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="row d-flex justify-content-center pt-5">
+    <div class="col-md-2">
+        <div class="input-group flex-nowrap">
+            <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="multiply_number_a"/>
+            <h3 class="px-2"></h3>
+            <h3><ng-katex [equation]="equation_a"></ng-katex></h3>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="input-group flex-nowrap">
+            <input type="number" class="form-control" placeholder="0" aria-label="number" aria-describedby="addon-wrapping" [(ngModel)]="multiply_number_b"/>
+            <h3 class="px-2"></h3>
+            <h3><ng-katex [equation]="equation_b"></ng-katex></h3><h3 class="px-2">=</h3>
+        </div>
+    </div>
+</div>
+
+<div class="text-center pt-5">
+    <button type="button" class="btn text-white btn-lg" style="background-color: #C97F64;" (click)="scalar_vector_solve()">SOLVE</button>
+</div>
+
+<h3 *ngIf="TwoDi">Result: <ng-katex [equation]="equation"></ng-katex> = {{ bracketos_unos_right }} {{ scalar_vector_result_one }} ; {{ scalar_vector_result_two }} {{ bracketos_unos_left }}</h3>
+<h3 *ngIf="TwoDiMinus">Result: <ng-katex [equation]="equation"></ng-katex> = {{ bracketos_unos_right }} {{ scalar_vector_result_one }} ; {{ scalar_vector_result_two }} {{ bracketos_unos_left }}</h3>
+
+<h3 *ngIf="ThreeDi">Result: <ng-katex [equation]="equation"></ng-katex> = {{ bracketos_unos_right }} {{ scalar_vector_result_one }} ; {{ scalar_vector_result_two }} ; {{ scalar_vector_result_three }} {{ bracketos_unos_left }}</h3>
+<h3 *ngIf="ThreeDiMinus">Result: <ng-katex [equation]="equation"></ng-katex> = {{ bracketos_unos_right }} {{ scalar_vector_result_one }} ; {{ scalar_vector_result_two }} ; {{ scalar_vector_result_three }} {{ bracketos_unos_left }}</h3>

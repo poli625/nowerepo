@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+
+.motto{
+    font-family: 'Lora', serif; 
+    font-size: 40pt;
+    text-shadow: 2px 2px 2px #ffff;
+    color: black !important;
+    font-weight: 500;
+}
+
+
+.homeheadings{
+    font-family: 'Lora', serif; 
+    font-size: 30pt;
+    text-shadow: 2px 2px 2px #ffff;
+    color: black !important;
+    font-weight: 500;
+}
+
+.nicks{
+    font-family: 'Lora', serif; 
+    font-weight: 400;
+    font-size: 18pt;
+    color: black !important;
+}
+
+.nicks_nicks{
+    font-family: 'Lora', serif; 
+    font-weight: 400;
+    font-size: 10pt;
+    color: black !important;
+}
+
+.btn-floating:hover{
+    color: #AF4A3E !important;
+    animation: ease-in-out 0.5s;
+}
+
+.linia{
+    display: inline;
+}

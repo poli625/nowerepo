@@ -1,0 +1,62 @@
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+<div class="pt-5"></div>
+
+<div class="container w-100 h-100 centering">
+    <div class="row align-items-center h-100 d-flex justify-content-center">
+        <div class="col-md-4 text-center">
+            <h3>Choose checking topic</h3>
+            <div class="dropdown">
+                <button
+                class="btn btn-lg dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+                style="background-color: #EBBCAC;"
+                >
+                Tasks Categories
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" (click)="angle_vector_task_press()">Angle between vectors</a></li>
+                <li><a class="dropdown-item" (click)="scalar_vector_task_press()">Scalar-vector multiplication</a></li>
+                <li><a class="dropdown-item" (click)="matrix_multiply_task_press()">Matrix Multiply</a></li>
+                <li><a class="dropdown-item" (click)="add_sub_vectors_task_press()">Add or Substract Vectors</a></li>
+                <li><a class="dropdown-item" (click)="orthogonal_vectors_task_press()">Orthogonal Vectors</a></li>
+                <li><a class="dropdown-item" (click)="dot_product_task_press()">Dot product of two Vectors</a></li>
+                </ul>
+            </div>
+
+            <div id="comp-render" *ngIf="angle_vector_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/angle_vector/{{angle_to_download}}" download='{{angle_to_download}}' class="btn btn-lg text-white" type="button" style="background-color: #C97F64;">Download your checking task from - Angle Between Vectors</a>
+            </div>
+        
+            <div id="comp-render" *ngIf="scalar_vector_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/scalar_vector/{{scalar_to_download}}" download='{{scalar_to_download}}' class="btn text-white btn-lg" type="button" style="background-color: #C97F64;">Download your checking task from - Scalar-vector multiplication</a>
+            </div>
+        
+            <div id="comp-render" *ngIf="matrix_multiply_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/matrix/{{matrix_to_download}}" download='{{matrix_to_download}}' class="btn text-white btn-lg" type="button" style="background-color: #C97F64;">Download your checking task form - Matrix Multiply</a>
+            </div>
+        
+            <div id="comp-render" *ngIf="add_sub_vectors_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/add_sub_vectors/{{add_sub_to_download}}" download='{{add_sub_to_download}}' class="btn text-white btn-lg" type="button" style="background-color: #C97F64;">Download your checking task from - Add or Substract Vectors</a>
+            </div>
+        
+            <div id="comp-render" *ngIf="orthogonal_vectors_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/orto_vectors/{{ortho_to_download}}" download='{{ortho_to_download}}' class="btn text-white btn-lg" type="button" style="background-color: #C97F64;">Download your checking task from - Orthogonal Vectors</a>
+            </div>
+        
+            <div id="comp-render" *ngIf="dot_product_task_display" class="pt-5">
+                <a target="_self" href="../../assets/PDF/dot_prod/{{dot_prod_to_download}}" download='{{dot_prod_to_download}}' class="btn text-white btn-lg" type="button" style="background-color: #C97F64;">Download your checking task from - Dot product of two Vectors</a>
+            </div>
+        
+
+        </div>
+    </div>
+</div>
+
